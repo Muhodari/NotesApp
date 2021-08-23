@@ -7,14 +7,123 @@ box-shadow: 2px 3px 14px 2px #000000;
 
 
 
-
+/* =============================================================== */
 /* Header  design */
+/* ============================================================ */
 
 
 
+/* =======================================
+============= main content
+*/
+
+.main-content{
+height: 700px;
+/* background-color: aqua; */
+}
+a {
+    color: white;
+  }
+  .title {
+    width:30%;
+    /* padding: 10px 20px 10px 10px; */
+    height: 550px;
+    font-size: 20px;
+    position: relative;
+    color: #FFF;
+    background: #2DCB73;
+    border: 1px solid black;
+  }
+  .cnct-main-descri-container{
+    width: 46%;
+    background-color: yellow;
+    /* display:inline-block; */
+    float: right;
+    height: 550px;
+    
+}
+
+
+  .title:after {
+    content: " ";
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    background: #2DCB73;
+    transform-origin: bottom left;
+    -ms-transform: skew(-30deg, 0deg);
+    -webkit-transform: skew(-30deg, 0deg);
+    transform: skew(-30deg, 0deg);
+  }
+  .title h2{
+    margin-left: 60px;
+    margin-top: 70px;
+    font-size: 40px;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  }
+
+  .title img{
+    margin-top: 20px;
+    border-radius:50%;
+    margin-left: 70px;
+  }
+/* form */
+.form {
+  display: block;
+  position: absolute;
+  margin: 0 auto;
+  width: 300px;
+  min-height: 400px;
+  top: 50%;
+  left: 50%;
+  transform: translateX(50%) translateY(-50%);
+}
+.form h1 {
+  display: block;
+  margin: 0 0 45px 0;
+  color: #B1B1B1;
+  font-weight: 200;
+  font-size: 18px;
+}
+
+.group { 
+  position: relative; 
+  margin-bottom: 25px; 
+}
+
+input {
+  font-size: 13px;
+  height: 25px;
+  padding: 10px 10px 10px 5px;
+  display: block;
+  width: 300px;
+  border: none;
+  outline: none;
+  border-bottom: 1px solid #B1B1B1;
+  color: #B1B1B1;
+  background: rgba(0,0,0,0);
+  opacity: 0.5;
+  transition: 0.2s ease;
+}
+
+
+
+
+
+
+/* ====================================================================== */
 /* some works design  */
+/* =================================================================== */
+body {margin:0;}
 .notes-container{
-    background-color:#ffffff;
+    margin-top: 100px;
+    background-color:#FBFBFB;
     min-height: 400px; 
 }
 
