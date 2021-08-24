@@ -303,6 +303,50 @@ input:focus ~ .highlight,textarea:focus~.highlight {
     border-radius:50%;
     margin-left: 30px;
   }
+
+/* form responsiveness  */
+
+.cnct-main-descri-container{
+  width: 100%;
+  background-color: white;
+  float:none;
+  height: 550px;
+  display: block;
+}
+
+.form {
+  display: block;
+  position: absolute;
+  margin: 0 auto;
+  width: 300px;
+  min-height: 400px;
+  top: 100%;
+  /* left: 100%; */
+  transform: translateX(-50%) translateY(-10%);
+  
+}
+
+.form input, textarea {
+  font-size: 13px;
+  height: 25px;
+  padding: 10px 10px 10px 5px;
+  display: block;
+  width: 200px;
+  border: none;
+  outline: none;
+  border-bottom: 1px solid #292727;
+  color: #131212;
+  background: rgba(240, 223, 223, 0);
+  opacity: 0.5;
+  transition: 0.2s ease;
+ 
+}
+.send-btn {
+  margin-right: 70px;
+  width: 100px;
+
+}
+
 }
 
 
