@@ -310,7 +310,7 @@ input:focus ~ .highlight,textarea:focus~.highlight {
   width: 100%;
   background-color: white;
   float:none;
-  height: 550px;
+  height: 410px;
   display: block;
 }
 
@@ -331,7 +331,7 @@ input:focus ~ .highlight,textarea:focus~.highlight {
   height: 25px;
   padding: 10px 10px 10px 5px;
   display: block;
-  width: 200px;
+  width: 150px;
   border: none;
   outline: none;
   border-bottom: 1px solid #292727;
@@ -342,7 +342,7 @@ input:focus ~ .highlight,textarea:focus~.highlight {
  
 }
 .send-btn {
-  margin-right: 70px;
+  margin-right: 100px;
   width: 100px;
 
 }
@@ -352,12 +352,10 @@ input:focus ~ .highlight,textarea:focus~.highlight {
 
 
 
-
-
-
 /* ====================================================================== */
 /* notes list */
 /* =================================================================== */
+
 body {margin:0;}
 .notes-container{
     margin-top: 100px;
@@ -473,6 +471,41 @@ body {margin:0;}
 font-size: 1.1rem;
   }
 
+
+
+@media screen and (max-width:823px){
+
+  .notes-container{
+    margin-top: 0px;
+    background-color:#FBFBFB;
+    min-height: 450px; 
+    
+}
+
+.horizontal-bar{
+  height: 2px;
+  width: 40px;
+  display: inline-block;
+  background-color: rgb(151, 138, 138);
+  margin-right: 12px;
+  margin-left: 0px;
+}
+.notes-Header h1{
+  margin-left: 0px;
+  font-weight: bold;
+  color: rgb(61, 59, 59);
+  font-size: 20px;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.notes-lst{
+  width: 60%;
+  align-items: center;
+  margin-left: 15px;
+}
+
+  
+}
 
 
   /* ===========================================================
