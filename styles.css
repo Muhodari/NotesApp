@@ -10,17 +10,25 @@ box-shadow: 2px 3px 14px 2px #000000;
 /* =============================================================== */
 /* Header  design */
 /* ============================================================ */
+.header-container{
+  height:70px ;
+  position: sticky;
+  position: -webkit-sticky; /* For macOS/iOS Safari */
+  top: 0; /* Sets the sticky toolbar to be on top */
+  z-index: 100;
+  background: white;
+  box-shadow: 1px 1px 1.5px 1px #00000046;
+  margin-bottom: 10px;
+  overflow: hidden;
+}
+
 ul.sidenav {
   list-style-type: none;
   margin: 0;
   padding: 0;
   width: 25%;
-  /* background-color: #f1f1f1; */
-  /* position: fixed; */
-  /* height: 100%; */
-  overflow:auto;
-  height: 60px !important;
-  margin-bottom: 10px;
+  
+  
   /* box-shadow: 0.5px 0.5px 0.75px 0.5px #00000046; */
 }
 
@@ -36,8 +44,8 @@ ul.sidenav li a {
 }
  
 ul.sidenav li a.active {
-  background-color: #2DCB73;
-  color: white;
+ 
+color: #2DCB73;
 }
 
 ul.sidenav li a:hover:not(.active) {
@@ -82,6 +90,7 @@ ul.sidenav li a:hover:not(.active) {
 ==================================*/
 
 .main-content{
+  margin-top:60px;
 height: 700px;
 /* background-color: aqua; */
 }
@@ -243,6 +252,27 @@ input:focus ~ .highlight,textarea:focus~.highlight {
 }
 
 
+/*  responsiveness  */
+
+@media screen and (max-width:768px) {
+  .cnct-main-descri-container{
+    width: 100% !important;
+    display: block;
+  }
+  .title{
+    width: 100%;
+    border: 0;
+  }
+  .title:after{
+   
+    -ms-transform: skew(0deg, 0deg);
+    -webkit-transform: skew(0deg, 0deg);
+    transform: skew(0deg, 0deg);
+  }
+
+
+  
+}
 
 
 
@@ -258,6 +288,7 @@ body {margin:0;}
     margin-top: 100px;
     background-color:#FBFBFB;
     min-height: 450px; 
+    
 }
 
 .horizontal-bar{
@@ -268,7 +299,7 @@ body {margin:0;}
     margin-right: 12px;
     margin-left: 170px;
 }
-.notes-Header{
+.notes-Header h1{
     margin-left: 170px;
     font-weight: bold;
     color: rgb(61, 59, 59);
@@ -277,7 +308,6 @@ body {margin:0;}
 }
 
 .notes-lst{
-
     width: 45%;
     align-items: center;
     margin-left: 20%;
@@ -287,8 +317,8 @@ body {margin:0;}
     margin-bottom: 1.2rem 0;
   }
   /* hide button */
-  input[type='checkbox'] {
-    display: none;
+.wrap-collabsible  input[type='checkbox'] {
+    display: none !important;
   }
 
   
@@ -424,11 +454,11 @@ font-size: 1.1rem;
   .about-coninter-description h1{
   font-weight: bold;
   font-family: 'Times New Roman', Times, serif;
-  font-size: 35px;
+  font-size: 31px;
   }
   
   .about-coninter-description p{
-   font-size: 20px;
+   font-size: 19px;
    font-family: 'Times New Roman', Times, serif;
   }
   

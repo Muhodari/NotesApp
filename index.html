@@ -12,12 +12,15 @@
 <div>
 
 <!-- Header -->
-<ul class="sidenav">
-  <li><a class="active" href="#home">Home</a></li>
-  <li><a href="#news">Notes List</a></li>
-  <li><a href="#contact">write Notes</a></li>
-  <li><a href="#about">About us</a></li>
-</ul>
+<div class="header-container">
+  <ul class="sidenav">
+    <li><a class="active" href="#home">Home</a></li>
+    <li><a href="#notes">Notes List</a></li>
+    <li><a href="#write-note">write Notes</a></li>
+    <li><a href="#about-us">About us</a></li>
+  </ul>
+</div>
+
 
 
 
@@ -27,7 +30,7 @@
 <div class="main-content">
 
 <div class="cnct-main-descri-container">
-  <div class="form">
+  <div class="form" id="write-note">
     <h1>Write  Notes</h1>
     <div class="group">
       <input type="text" required>
@@ -39,7 +42,7 @@
       <span class="highlight"></span>
       <label>Content*</label>
     </div>
-    <button class="send-btn">save</button>
+    <button class="send-btn" type="submit">save</button>
   </div>
 
 </div>
@@ -61,14 +64,38 @@
     
 
 
-<div class="notes-container">
+<div class="notes-container" id="notes">
 <div class="horizontal-bar"></div>notes <br>
-<h1 class="notes-Header">List of available notes</h1>
+<div class="notes-Header">
+  <h1>List of available notes</h1>
+</div>
 
 
-<div class="notes-lst">
+
+
+<div class="notes-lst" id="notes">
 
     <!-- content -->
+
+
+    
+    <div class="wrap-collabsible">
+      <input id="collapsible" class="check" type="checkbox">
+      <label for="collapsible" class="label-name">database design</label>
+      <div class="collapsible-content">
+        <div class="content-inner">
+          <p>
+            QUnit is by calling one of the object that are embedded in JavaScript, and faster JavaScript program could also used with
+            its elegant, well documented, and functional programming using JS, HTML pages Modernizr is a popular browsers without
+            plug-ins. Test-Driven Development.
+          </p>
+        </div>
+      </div>
+    </div>
+
+
+
+
     <div class="wrap-collabsible">
         <input id="collapsible" class="check" type="checkbox">
         <label for="collapsible" class="label-name">embeded system</label>
@@ -128,20 +155,6 @@
       </div>
 
 
-      <div class="wrap-collabsible">
-        <input id="collapsible" class="check" type="checkbox">
-        <label for="collapsible" class="label-name">database design</label>
-        <div class="collapsible-content">
-          <div class="content-inner">
-            <p>
-              QUnit is by calling one of the object that are embedded in JavaScript, and faster JavaScript program could also used with
-              its elegant, well documented, and functional programming using JS, HTML pages Modernizr is a popular browsers without
-              plug-ins. Test-Driven Development.
-            </p>
-          </div>
-        </div>
-      </div>
-
 
 
       <!--  -->
@@ -154,7 +167,7 @@
     
 
 <!-- about us container -->
-<div class="about-me-container">
+<div class="about-me-container" id="about-us">
   <!-- left description -->
 <div class="about-container">
   <div class="contain-leftdescription">
