@@ -121,7 +121,7 @@ a {
     background-color: white;
     /* display:inline-block; */
     float: right;
-    height: 550px;
+    height: 100px;
     
 }
 
@@ -322,7 +322,7 @@ input:focus ~ .highlight,textarea:focus~.highlight {
   min-height: 400px;
   top: 100%;
   /* left: 100%; */
-  transform: translateX(-50%) translateY(-10%);
+  transform: translateX(-40%) translateY(-10%);
   
 }
 
@@ -499,11 +499,14 @@ font-size: 1.1rem;
 }
 
 .notes-lst{
-  width: 60%;
+  width: 50%;
+  
   align-items: center;
-  margin-left: 15px;
+  margin-left: 2%;
 }
-
+.label-name{
+  min-height: 40px;
+}
   
 }
 
@@ -521,7 +524,6 @@ font-size: 1.1rem;
   
   .about-me-container div{
     float: left;
-    /* width: 48%; */
     margin-left: 0%;
     height:680px;
   }
@@ -568,6 +570,73 @@ font-size: 1.1rem;
   .about-coninter-description p{
    font-size: 19px;
    font-family: 'Times New Roman', Times, serif;
+  }
+
+  /*About us responsiveness  */
+  @media screen and (max-width:823px)
+   {
+
+    .about-me-container{
+      width: 100%;
+      height: 760px;
+      }
+      
+      .about-me-container div{
+        float: none;
+        margin-left: 0%;
+        height:380px;
+        display: block;
+      }
+      
+      .about-container{
+        width: 100%;
+        /* padding-top: 150px; */
+      }
+      
+        .about-image{
+          width: 100%;
+          /* background-color:white; */
+        }
+        .about-image img{
+          height:200px;
+          width: 160px;
+          /* font-size: 20px; */
+          /* margin-left: 90px; */
+        }
+      
+      .about-container{
+      /* background-color: white; */
+      width: 100%;
+      margin-left:0px !important;
+      
+      }
+      
+      .horizontal{
+        margin-top: 6px;
+        height:2px !important;
+        border: 2px;
+        background-color:grey;
+        margin-right: 10px;
+        width:30px;
+        display: inline-block;
+      }
+      .about-coninter-description h1{
+      font-weight: bold;
+      font-family: 'Times New Roman', Times, serif;
+      font-size: 25px;
+      }
+      
+      .about-coninter-description p{
+       font-size: 16px;
+       font-family: 'Times New Roman', Times, serif;
+      }
+
+
+
+
+
+
+
   }
   
   
