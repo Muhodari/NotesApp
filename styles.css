@@ -11,7 +11,7 @@ box-shadow: 2px 3px 14px 2px #000000;
 /* Header  design */
 /* ============================================================ */
 .header-container{
-  height:70px ;
+  height:100% ;
   position: sticky;
   position: -webkit-sticky; /* For macOS/iOS Safari */
   top: 0; /* Sets the sticky toolbar to be on top */
@@ -33,12 +33,9 @@ ul.sidenav {
 }
 
 ul.sidenav li a {
-  display:inline-block;
-
   color: #000;
   padding: 8px 16px;
   text-decoration: none;
-  /* font-weight: bold; */
   font-size:18px ;
  font-family: 'Times New Roman', Times, serif;
 }
@@ -54,11 +51,12 @@ ul.sidenav li a:hover:not(.active) {
 }
 
 
+
+
 @media screen and (min-width: 900px) {
   ul.sidenav {
     width: 100%;
     height: auto;
-    position: relative;
   }
   
   ul.sidenav li a {
@@ -68,12 +66,23 @@ ul.sidenav li a:hover:not(.active) {
   
 }
 
-@media screen and (max-width: 400px) {
-  ul.sidenav li a {
-    text-align: center;
-    float: none;
+
+
+@media screen and (max-width: 823px) {
+  ul.sidenav li{
+    margin-top: 15px;
+    margin-bottom: 4px;
+    /* border-bottom: 1px outset gray; */
   }
+  ul.sidenav li a{
+    padding: 0;
+    float: none;
+
+
+  }
+ 
 }
+
 
 
 
