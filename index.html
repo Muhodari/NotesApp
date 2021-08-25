@@ -5,6 +5,7 @@
     <title>Notes App</title>
       <link rel="stylesheet" href="./styles.css">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      
 </head>
 
 <body>
@@ -47,21 +48,14 @@
       </div>
       
         
-      <div class="notes-lst" id="notes">
-          <div class="wrap-collabsible">
-            <input id="collapsible" class="check" type="checkbox">
-            <label for="collapsible" class="label-name">database design</label>
-            <div class="collapsible-content">
-              <div class="content-inner">
-                <p>
-                  QUnit is by calling one of the object that are embedded in JavaScript, and faster JavaScript program could also used with
-                  its elegant, well documented, and functional programming using JS, HTML pages Modernizr is a popular browsers without
-                  plug-ins. Test-Driven Development.
-                </p>
-                <button class="delete-btn" type="submit">Delete</button>
-              </div>
-            </div>
+      <div class="notes-lst" id="notes" key='uniqueKey'>
+
+          <div class="wrap-collabsible">            
           </div>
+
+
+
+
       </div>
           </div>
           
@@ -78,17 +72,23 @@
 <div class="cnct-main-descri-container">
   <div class="form" id="write-note">
     <h1>Write  Notes</h1>
+
+    <form>
     <div class="group">
-      <input type="text" required>
+      <input type="text" required id="note_title">
       <span class="highlight"></span>
       <label>Tittle*</label>
     </div>
+
     <div class="group">
-      <textarea name="" id="" cols="30" rows="10" required></textarea>
+      <textarea name="" id="note_description" cols="30" rows="10" required></textarea>
       <span class="highlight"></span>
       <label>Content*</label>
     </div>
-    <button class="send-btn" type="submit">save</button>
+    <button class="send-btn" type="button" id="save_note" >save</button>
+    </form>
+
+
   </div>
 
 </div>
@@ -141,9 +141,9 @@
 
 
 
-
-
 </div>   
+
+<script src="script.js"></script>
 </body>
 
 
