@@ -292,6 +292,16 @@ input:focus ~ .highlight,textarea:focus~.highlight {
   -moz-animation:inputHighlighter 0.3s ease;
   animation:inputHighlighter 0.3s ease;
 }
+.update-btn{
+  margin-left: 20px;
+  width: 100px;
+  height: 30px;
+  background-color: #1636ebd2;
+  color: white;
+  font-size: 16px;
+  border-radius: 5px;
+  box-shadow: 2px 2px 3px 2px #00000046;
+}
 .delete-btn{
   margin-left: 120px;
   width: 100px;

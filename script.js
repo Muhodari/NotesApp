@@ -8,9 +8,7 @@
     var noteList;
   
     // Initialize noteList 
-    // Add event to save button
-    // Render the list
-  
+    
     function init() {
   
       if (!!(window.localStorage.getItem('noteList'))) {
@@ -22,10 +20,11 @@
       showList();
     }
   
-    //End Init
   
-    //CRUD note
-  
+    //   start crud opperations
+
+
+//   show the note list
     function showList() {
   
       if (!!noteList.length) {
@@ -40,8 +39,8 @@
     }
   
 
+    // create new note
     function saveNote(event) {
-  
       var note = {
         noteId: lastId,
         noteDes: document.getElementById("note_title").value,
@@ -55,41 +54,34 @@
     }
   
 
+//  append note to current list
+
     function addNoteToList(note) {
 
-    //  =================
-
     var wrapCollabsible= document.createElement('div');
-    wrapCollabsible.setAttribute("class", "wrap-collabsible")
+    var checkbox = document.createElement('input')
+    var lable = document.createElement('label')
+    var collapsibleContent =document.createElement('div')
+    var contentInner =document.createElement('div')
+    var showDecriptions = document.createElement('p')
+    var removeIcon= document.createElement('button')
+    var updateIcon = document.createElement('button')
 
-   var checkbox = document.createElement('input')
+    wrapCollabsible.setAttribute("class", "wrap-collabsible")
     checkbox.setAttribute('type',"checkbox")
     checkbox.setAttribute('id',"collapsible")
     checkbox.setAttribute("class","check")
-
-    var lable = document.createElement('label')
     lable.setAttribute("class","label-name")
     lable.setAttribute("for","collapsible")
-      
-    var collapsibleContent =document.createElement('div')
     collapsibleContent.setAttribute("class","collapsible-content")
-
-    var contentInner =document.createElement('div')
-     contentInner.setAttribute("class","content-inner")
-
-    var showDecriptions = document.createElement('p')
-
-    var removeIcon= document.createElement('button')
-
+    contentInner.setAttribute("class","content-inner")
     removeIcon.setAttribute("class","delete-btn")
-     removeIcon.setAttribute("type","button")
-     removeIcon.setAttribute ("class", "delete-btn remove_item clickeable");
-     removeIcon.setAttribute("title", "Remove");
-     removeIcon.innerHTML="Delete"
-
-     var updateIcon = document.createElement('span')
-    updateIcon.innerHTML = "U";
-    updateIcon.className = "update_icon clickeable";
+    removeIcon.setAttribute("type","button")
+    removeIcon.setAttribute ("class", "delete-btn remove_item clickeable");
+    removeIcon.setAttribute("title", "Remove");
+    removeIcon.innerHTML="Delete" 
+    updateIcon.innerHTML = "Update";
+    updateIcon.className = "update-btn update_icon clickeable";
     updateIcon.setAttribute("title", "Update");
 
 
@@ -97,28 +89,29 @@
    showDecriptions.innerHTML= note.noteState; 
    contentInner.appendChild(showDecriptions);
 //    contentInner.appendChild(removeIcon);
-   
-   collapsibleContent.appendChild(contentInner);
 
+   collapsibleContent.appendChild(contentInner);
    lable.innerHTML = note.noteDes
    wrapCollabsible.appendChild(checkbox);
    wrapCollabsible.appendChild(lable)
    wrapCollabsible.appendChild(collapsibleContent);
    wrapCollabsible.appendChild(updateIcon);
-    wrapCollabsible.appendChild(removeIcon);
+   wrapCollabsible.appendChild(removeIcon);
 
    noteWrapper.appendChild(wrapCollabsible);
 
     }
   
 
+//================= update note
 
-    function updateNote(event) {
+function updateNote(event) {
   
       var noteTag = event.currentTarget.parentNode;
       var noteId = noteTag.id;
       var noteToUpdate = findNote(noteId).note;
       var pos = findNote(noteId).pos;
+
       if (!!noteToUpdate) {
         var des = prompt("Note Description", noteToUpdate.noteDes);
         var state = prompt("Note State", noteToUpdate.noteState);
@@ -147,17 +140,17 @@
       syncNote();
     }
   
-    // End CRUD
+    
   
-  
-    //Common
-  
+    
+//   automaticaly sync list
     function syncNote() {
-  
+
       window.localStorage.setItem('noteList', JSON.stringify(noteList));
       noteList = JSON.parse(window.localStorage.getItem('noteList'));
     }
   
+
     function getLastNoteId() {
       var lastNote = noteList[noteList.length - 1];
       lastId = lastNote.noteId + 1;
@@ -180,7 +173,7 @@
       }
     }
   
-    
+
     function findNote(id) {
       var response = {
         note: '',
