@@ -5,6 +5,7 @@
     <title>Notes App</title>
       <link rel="stylesheet" href="./styles.css">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      
 </head>
 
 <body>
@@ -26,7 +27,7 @@
 
 <!-- welcome  page -->
 <div class="hero">
-  <h1>Cute kittehs everywhere!</h1>
+  <h1>save your Notes or remain un saved!</h1>
 </div>
 
 
@@ -35,25 +36,66 @@
 <!-- Main content -->
 <div class="main-content">
 
+
+
   <div class="title">
-    <h2>save  notes Now</h2>
-    <img src="./images/Education__2813_29.jpg" />
+   
+    <!-- list of available list -->
+    <div class="notes-container" id="notes">
+      <div class="horizontal-bar"></div>notes <br>
+      <div class="notes-Header">
+        <h1>List of available notes</h1>
+      </div>
+      
+        
+      <div class="notes-lst" id="notes" key='uniqueKey'>
+
+          <div class="wrap-collabsible">  
+          </div>
+
+
+          <div class="panel" id="panel">
+          
+           
+        </div>
+
+
+
+
+
+      </div>
+          </div>
+          
+
+
+
+
+
+
+
+    
   </div>
 
 <div class="cnct-main-descri-container">
   <div class="form" id="write-note">
     <h1>Write  Notes</h1>
+
+    <form>
     <div class="group">
-      <input type="text" required>
+      <input type="text" required id="note_title">
       <span class="highlight"></span>
       <label>Tittle*</label>
     </div>
+
     <div class="group">
-      <textarea name="" id="" cols="30" rows="10" required></textarea>
+      <textarea name="" id="note_description" cols="30" rows="10" required></textarea>
       <span class="highlight"></span>
       <label>Content*</label>
     </div>
-    <button class="send-btn" type="submit">save</button>
+    <button class="send-btn" type="button" id="save_note" >save</button>
+    </form>
+
+
   </div>
 
 </div>
@@ -71,105 +113,7 @@
     
 
 
-<div class="notes-container" id="notes">
-<div class="horizontal-bar"></div>notes <br>
-<div class="notes-Header">
-  <h1>List of available notes</h1>
-</div>
 
-
-
-
-<div class="notes-lst" id="notes">
-
-    <!-- content -->
-
-
-    
-    <div class="wrap-collabsible">
-      <input id="collapsible" class="check" type="checkbox">
-      <label for="collapsible" class="label-name">database design</label>
-      <div class="collapsible-content">
-        <div class="content-inner">
-          <p>
-            QUnit is by calling one of the object that are embedded in JavaScript, and faster JavaScript program could also used with
-            its elegant, well documented, and functional programming using JS, HTML pages Modernizr is a popular browsers without
-            plug-ins. Test-Driven Development.
-          </p>
-        </div>
-      </div>
-    </div>
-
-
-
-
-    <div class="wrap-collabsible">
-        <input id="collapsible" class="check" type="checkbox">
-        <label for="collapsible" class="label-name">embeded system</label>
-        <div class="collapsible-content">
-          <div class="content-inner">
-            <p>
-              QUnit is by calling one of the object that are embedded in JavaScript, and faster JavaScript program could also used with
-              its elegant, well documented, and functional programming using JS, HTML pages Modernizr is a popular browsers without
-              plug-ins. Test-Driven Development.
-            </p>
-          </div>
-        </div>
-      </div>
-
-
-      <div class="wrap-collabsible">
-        <input id="collapsible" class="check" type="checkbox">
-        <label for="collapsible" class="label-name">cyber security</label>
-        <div class="collapsible-content">
-          <div class="content-inner">
-            <p>
-              QUnit is by calling one of the object that are embedded in JavaScript, and faster JavaScript program could also used with
-              its elegant, well documented, and functional programming using JS, HTML pages Modernizr is a popular browsers without
-              plug-ins. Test-Driven Development.
-            </p>
-          </div>
-        </div>
-      </div>
-
-
-      <div class="wrap-collabsible">
-        <input id="collapsible" class="check" type="checkbox">
-        <label for="collapsible" class="label-name">software engineering</label>
-        <div class="collapsible-content">
-          <div class="content-inner">
-            <p>
-              QUnit is by calling one of the object that are embedded in JavaScript, and faster JavaScript program could also used with
-              its elegant, well documented, and functional programming using JS, HTML pages Modernizr is a popular browsers without
-              plug-ins. Test-Driven Development.
-            </p>
-          </div>
-        </div>
-      </div>
-
-      <div class="wrap-collabsible">
-        <input id="collapsible" class="check" type="checkbox">
-        <label for="collapsible" class="label-name">Networking</label>
-        <div class="collapsible-content">
-          <div class="content-inner">
-            <p>
-              QUnit is by calling one of the object that are embedded in JavaScript, and faster JavaScript program could also used with
-              its elegant, well documented, and functional programming using JS, HTML pages Modernizr is a popular browsers without
-              plug-ins. Test-Driven Development.
-            </p>
-          </div>
-        </div>
-      </div>
-
-
-
-
-      <!--  -->
-
-
-</div>
-    </div>
-    
     <!--end of notes list  -->
     
 
@@ -204,9 +148,9 @@
 
 
 
-
-
 </div>   
+
+<script src="script.js"></script>
 </body>
 
 
