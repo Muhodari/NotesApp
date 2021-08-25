@@ -5,13 +5,15 @@ box-shadow: 2px 3px 14px 2px #000000;
 
 */
 
-
+*{
+  font-family:Arial, Helvetica, sans-serif;
+}
 
 /* =============================================================== */
 /* Header  design */
 /* ============================================================ */
 .header-container{
-  height:100% ;
+  min-height:70px;
   position: sticky;
   position: -webkit-sticky; /* For macOS/iOS Safari */
   top: 0; /* Sets the sticky toolbar to be on top */
@@ -37,7 +39,6 @@ ul.sidenav li a {
   padding: 8px 16px;
   text-decoration: none;
   font-size:18px ;
- font-family: 'Times New Roman', Times, serif;
 }
  
 ul.sidenav li a.active {
@@ -113,7 +114,7 @@ ul.sidenav li a:hover:not(.active) {
 
 .hero h1 {
 color:black;
-font-family: monospace;
+
 overflow: hidden; /* Ensures the content is not revealed until the animation */
 border-right: .15em solid orange; /* The typwriter cursor */
 white-space: nowrap; /* Keeps the content on a single line */
@@ -149,24 +150,23 @@ from, to { border-color: transparent }
 
 .main-content{
   margin-top:60px;
-height: 700px;
-/* background-color: aqua; */
+ height: 100%;
 }
 a {
     color: white;
   }
   .title {
-    width:30%;
+    width:35%;
     /* padding: 10px 20px 10px 10px; */
-    height: 550px;
+    min-height: 550px;
     font-size: 20px;
     position: relative;
     color: #FFF;
-    background: #2DCB73;
-    border: 1px solid #2DCB73;
+    background: #FBFBFB;
+    border: 1px solid #FBFBFB;
   }
   .cnct-main-descri-container{
-    width: 46%;
+    width: 30%;
     background-color: white;
     /* display:inline-block; */
     float: right;
@@ -184,11 +184,12 @@ a {
     top: 0;
     left: 0;
     z-index: -1;
-    background: #2DCB73;
+    background: #fbfbfb;
     transform-origin: bottom left;
     -ms-transform: skew(-30deg, 0deg);
     -webkit-transform: skew(-30deg, 0deg);
     transform: skew(-30deg, 0deg);
+    box-shadow: 2px 2px 3px 2px #00000046;
   }
   .title h2{
     margin-left: 60px;
@@ -196,7 +197,7 @@ a {
     font-size: 40px;
     text-transform: uppercase;
     font-weight: bold;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    
   }
 
   .title img{
@@ -214,7 +215,7 @@ a {
   min-height: 400px;
   top: 50%;
   left: 50%;
-  transform: translateX(50%) translateY(-10%);
+  transform: translateX(60%) translateY(130%);
   
 }
 .form h1 {
@@ -245,6 +246,11 @@ a {
   transition: 0.2s ease;
  
 }
+.form textarea{
+  height: 85px !important;
+}
+
+
 input:focus {
   outline: none;
   opacity: 1;
@@ -286,6 +292,21 @@ input:focus ~ .highlight,textarea:focus~.highlight {
   -moz-animation:inputHighlighter 0.3s ease;
   animation:inputHighlighter 0.3s ease;
 }
+.delete-btn{
+  margin-left: 120px;
+  width: 100px;
+  height: 30px;
+  background-color: #eb1616;
+  color: white;
+  font-size: 16px;
+  border-radius: 5px;
+  border: 1px solid #eb1616;
+  box-shadow: 2px 2px 3px 2px #00000046;
+  cursor: pointer;
+  
+  
+
+}
 
 .send-btn {
   float: right;
@@ -299,7 +320,6 @@ input:focus ~ .highlight,textarea:focus~.highlight {
   text-align: center;
   border-radius: 20px;
   box-shadow: 2px 2px 3px 2px #00000046;
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   text-transform: uppercase;
 
 }
@@ -315,7 +335,7 @@ input:focus ~ .highlight,textarea:focus~.highlight {
 @media screen and (max-width:823px) {
   .title {
     width:100%;    
-    height: 300px;
+    height: 100%;;
     color: #FFF;
     background: #2DCB73;
     border: 1px solid #2DCB73;
@@ -343,7 +363,7 @@ input:focus ~ .highlight,textarea:focus~.highlight {
     font-size: 20px;
     text-transform: uppercase;
     font-weight: bold;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    
   }
 
   .title img{
@@ -371,7 +391,7 @@ input:focus ~ .highlight,textarea:focus~.highlight {
   min-height: 400px;
   top: 100%;
   /* left: 100%; */
-  transform: translateX(-40%) translateY(-10%);
+  transform: translateX(-40%) translateY(160%);
   
 }
 
@@ -407,9 +427,10 @@ input:focus ~ .highlight,textarea:focus~.highlight {
 
 body {margin:0;}
 .notes-container{
-    margin-top: 100px;
+    margin-top: 10px;
     background-color:#FBFBFB;
     min-height: 450px; 
+    color:black;
     
 }
 
@@ -419,20 +440,21 @@ body {margin:0;}
     display: inline-block;
     background-color: rgb(151, 138, 138);
     margin-right: 12px;
-    margin-left: 170px;
+    margin-left: 20px;
+    color:black;
 }
 .notes-Header h1{
-    margin-left: 170px;
+    margin-left: 20px;
     font-weight: bold;
     color: rgb(61, 59, 59);
     font-size: 30px;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    
 }
 
 .notes-lst{
-    width: 45%;
+    width: 85%;
     align-items: center;
-    margin-left: 20%;
+    margin-left: 3%;
 }
 
 .wrap-collabsible {
@@ -447,7 +469,6 @@ body {margin:0;}
   .label-name {
     display: block;
     font-weight:100px;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif ;
     font-size: 1.03rem !important;
     /* text-align: center; */
     padding: 1rem;
@@ -517,7 +538,7 @@ body {margin:0;}
 
   }
   .content-inner p{
-font-size: 1.1rem;
+font-size: 1rem;
   }
 
 
@@ -527,7 +548,7 @@ font-size: 1.1rem;
   .notes-container{
     margin-top: 0px;
     background-color:#FBFBFB;
-    min-height: 450px; 
+    min-height: 200px; 
     
 }
 
@@ -544,7 +565,7 @@ font-size: 1.1rem;
   font-weight: bold;
   color: rgb(61, 59, 59);
   font-size: 20px;
-  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  
 }
 
 .notes-lst{
@@ -612,13 +633,11 @@ font-size: 1.1rem;
   }
   .about-coninter-description h1{
   font-weight: bold;
-  font-family: 'Times New Roman', Times, serif;
-  font-size: 31px;
+  font-size: 25px;
   }
   
   .about-coninter-description p{
-   font-size: 19px;
-   font-family: 'Times New Roman', Times, serif;
+   font-size: 18px;
   }
 
   /*About us responsiveness  */
@@ -671,13 +690,11 @@ font-size: 1.1rem;
       }
       .about-coninter-description h1{
       font-weight: bold;
-      font-family: 'Times New Roman', Times, serif;
       font-size: 25px;
       }
       
       .about-coninter-description p{
        font-size: 16px;
-       font-family: 'Times New Roman', Times, serif;
       }
 
 
