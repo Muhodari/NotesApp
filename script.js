@@ -1,5 +1,4 @@
 (function() {
-    'use strict';
     var lastId = 0;
     var noteWrapper = document.getElementById("panel");
     var btnSave = document.getElementById("save_note");
