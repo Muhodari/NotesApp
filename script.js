@@ -1,7 +1,7 @@
 (function() {
     'use strict';
     var lastId = 0;
-    var noteWrapper = document.getElementById("notes");
+    var noteWrapper = document.getElementById("panel");
     var btnSave = document.getElementById("save_note");
     var removeIcon;
     var updateIcon;
@@ -58,47 +58,50 @@
 
     function addNoteToList(note) {
 
-    var wrapCollabsible= document.createElement('div');
-    var checkbox = document.createElement('input')
-    var lable = document.createElement('label')
-    var collapsibleContent =document.createElement('div')
-    var contentInner =document.createElement('div')
-    var showDecriptions = document.createElement('p')
-    var removeIcon= document.createElement('button')
-    var updateIcon = document.createElement('button')
 
-    wrapCollabsible.setAttribute("class", "wrap-collabsible")
-    checkbox.setAttribute('type',"checkbox")
-    checkbox.setAttribute('id',"collapsible")
-    checkbox.setAttribute("class","check")
-    lable.setAttribute("class","label-name")
-    lable.setAttribute("for","collapsible")
-    collapsibleContent.setAttribute("class","collapsible-content")
-    contentInner.setAttribute("class","content-inner")
-    removeIcon.setAttribute("class","delete-btn")
-    removeIcon.setAttribute("type","button")
-    removeIcon.setAttribute ("class", "delete-btn remove_item clickeable");
-    removeIcon.setAttribute("title", "Remove");
-    removeIcon.innerHTML="Delete" 
-    updateIcon.innerHTML = "Update";
-    updateIcon.className = "update-btn update_icon clickeable";
-    updateIcon.setAttribute("title", "Update");
+      var removeIcon= document.createElement('button')
+      var updateIcon = document.createElement('button')
+
+      var details =  document.createElement('details')
+      var summary = document.createElement('summary')
+      var title = document.createElement('p')
+
+    //   removeIcon.setAttribute("class","delete-btn")
+      removeIcon.setAttribute("type","button")
+      removeIcon.setAttribute ("class", "delete-btn remove_item clickeable");
+      removeIcon.setAttribute("title", "Remove");
+      removeIcon.innerHTML="Delete" 
+
+      updateIcon.innerHTML = "Update";
+      updateIcon.setAttribute("class",  "update-btn update_icon clickeable");
+      updateIcon.setAttribute("title", "Update");
+  
 
 
-//    content inner
-   showDecriptions.innerHTML= note.noteState; 
-   contentInner.appendChild(showDecriptions);
-//    contentInner.appendChild(removeIcon);
+      var div =document.createElement('div')
+      div.setAttribute("class","content")
 
-   collapsibleContent.appendChild(contentInner);
-   lable.innerHTML = note.noteDes
-   wrapCollabsible.appendChild(checkbox);
-   wrapCollabsible.appendChild(lable)
-   wrapCollabsible.appendChild(collapsibleContent);
-   wrapCollabsible.appendChild(updateIcon);
-   wrapCollabsible.appendChild(removeIcon);
 
-   noteWrapper.appendChild(wrapCollabsible);
+       
+       var Descriptions= document.createElement('p')
+       Descriptions.innerHTML =note.noteState;
+       div.appendChild(Descriptions)
+        
+
+       title.innerHTML=note.noteDes;
+       summary.append(title)
+       
+       details.appendChild(summary);
+       details.appendChild(div);
+       details.appendChild(updateIcon)
+       details.append(removeIcon)
+       
+
+    
+
+     
+
+   noteWrapper.appendChild(details);
 
     }
   
