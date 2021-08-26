@@ -94,13 +94,8 @@
        details.appendChild(div);
        details.appendChild(updateIcon)
        details.append(removeIcon)
-       
-
-    
-
-     
-
-   noteWrapper.appendChild(details);
+   
+       noteWrapper.appendChild(details);
 
     }
   
@@ -108,8 +103,11 @@
 //================= update note
 
 function updateNote(event) {
-  
       var noteTag = event.currentTarget.parentNode;
+      // ccccc
+      // console.log("@@@@@@@ update")
+      console.log(noteTag.id)
+      
       var noteId = noteTag.id;
       var noteToUpdate = findNote(noteId).note;
       var pos = findNote(noteId).pos;
@@ -122,7 +120,7 @@ function updateNote(event) {
         noteList[pos] = noteToUpdate;
         noteTag.lastChild.textContent = noteToUpdate.noteDes;
         syncNote();
-        window.location.reload()
+        // window.location.reload()
       }
     }
 
@@ -142,7 +140,7 @@ function updateNote(event) {
       syncNote();
     }
   
-    
+                       
   
     
 //   automaticaly sync list
@@ -160,7 +158,7 @@ function updateNote(event) {
   
 
     function syncEvents() {
-  
+
       updateIcon = document.getElementsByClassName("update_icon");
       removeIcon = document.getElementsByClassName("remove_item");
       if (!!removeIcon.length) {
@@ -198,3 +196,5 @@ function updateNote(event) {
   
   
   })();
+
+  
